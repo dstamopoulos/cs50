@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta property="og:description" content="Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, and software engineering. Languages include C, Python, and SQL plus students' choice of: HTML, CSS, and JavaScript (for web development); Java or Swift (for mobile app development); or Lua (for game development). Problem sets inspired by the arts, humanities, social sciences, and sciences. Course culminates in a final project. Designed for concentrators and non-concentrators alike, with or without prior programming experience. Two thirds of CS50 students have never taken CS before. Among the overarching goals of this course are to inspire students to explore unfamiliar waters, without fear of failure, create an intensive, shared experience, accessible to all students, and build community among students.">
+
+<meta property="og:image" content="https://img.youtube.com/vi/e9Eds2Rc_x8/maxresdefault.jpg"><meta property="og:title" content="Lecture 0 - CS50x">
+
+<meta property="og:url" content=""><link href="https://cs50.harvard.edu/x/2020/favicon.ico?1579747319" rel="icon">
+
+<!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+<link href="Lecture%200%20-%20CS50x_files/all.css" rel="stylesheet">
+
+<link href="Lecture%200%20-%20CS50x_files/page.css" rel="stylesheet">
+
+<!-- http://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+<script src="Lecture%200%20-%20CS50x_files/jquery.js"></script>
+<script src="Lecture%200%20-%20CS50x_files/popper.js"></script>
+<script src="Lecture%200%20-%20CS50x_files/bootstrap.js"></script>
+
+<!-- https://github.com/pellepim/jstimezonedetect -->
+<script src="Lecture%200%20-%20CS50x_files/jstz.js"></script>
+
+<!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+<script src="Lecture%200%20-%20CS50x_files/moment.js"></script>
+<script src="Lecture%200%20-%20CS50x_files/moment-timezone-with-data-10-year-range.js"></script>
+
+
+
+<script src="Lecture%200%20-%20CS50x_files/jekyll-theme-cs50.js"></script>
+
+<title>Lecture 0 - CS50x</title>
+</head>
+
+    <body>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <aside class="col-md">
+ 
+                    <header><h1 data-id="this-is-cs50x"><a href="https://cs50.harvard.edu/x/2020/">This is CS50x</a></h1>
+
+<p>OpenCourseWare</p>
+
+<p><a href="https://cs.harvard.edu/malan/">David J. Malan</a><br>
+<a href="mailto:malan@harvard.edu">malan@harvard.edu</a><br>
+<a href="https://www.facebook.com/dmalan" class="pr-1"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/davidjmalan/" class="pr-1"><i class="fab fa-instagram"></i></a>
+<a href="https://www.linkedin.com/in/malan/" class="pr-1"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.quora.com/profile/David-J-Malan" class="pr-1"><i class="fab fa-quora"></i></a>
+<a href="https://twitter.com/davidjmalan" class="pr-1"><i class="fab fa-twitter"></i></a></p></header>
+
+                    
+
+                    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside &gt; nav" data-toggle="collapse">
+                        Menu
+                    </button>
+
+                    <nav class="collapse d-md-block"><hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/weeks/0/">Week 0</a> Scratch <strong class="text-white">😺</strong></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/weeks/1/">Week 1</a> C</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/weeks/2/">Week 2</a> Arrays</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/weeks/3/">Week 3</a> Algorithms</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/weeks/4/">Week 4</a> Memory</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/weeks/5/">Week 5</a> Data Structures</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/weeks/6/">Week 6</a> Python <strong class="text-white">🐍</strong></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/weeks/7/">Week 7</a> SQL</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>
+    <p><a href="https://cs50.harvard.edu/x/2020/weeks/8/">Week 8</a> Information</p>
+  </li>
+</ul>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/tracks/">Tracks</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/tracks/mobile/android/">Android</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/tracks/games/">Games</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/tracks/mobile/ios/">iOS</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-circle"></i></span>
+    <p><a href="https://cs50.harvard.edu/x/2020/tracks/web/">Web</a></p>
+  </li>
+</ul>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/project/">Final Project</a></li>
+</ul>
+
+<hr>
+
+<p><a href="https://cs50.harvard.edu/x/2020/certificate/">CS50 Certificate</a></p>
+
+<hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/ed">Ed Discussion</a> for Q&amp;A</li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/quickstart.pdf">Quick Start Guide</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/faqs/">FAQs</a></li>
+</ul>
+
+<hr>
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.edx.org/">edX</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="#">iTunes U</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://www.youtube.com/playlist?list=PLhQjrBD2T381L3iZyDTxRwOBuUt6m1FnW">YouTube</a></li>
+</ul>
+
+<hr>
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://ide.cs50.io/">CS50 IDE</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://sandbox.cs50.io/">CS50 Sandbox</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.me/cs50x">Gradebook</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://man.cs50.io/">Manual Pages</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://docs.python.org/3.7/search.html">Python Documentation</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.readthedocs.io/style/c/">Style Guide</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.harvard.edu/x/2020/syllabus/">Syllabus</a></li>
+</ul>
+
+<hr>
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://discord.gg/T8QZqRx">Discord</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://www.facebook.com/groups/cs50/">Facebook Group</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://www.facebook.com/cs50/">Facebook Page</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://gitter.im/cs50/x">Gitter</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://instagram.com/cs50">Instagram</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://www.linkedin.com/groups/7437240/">LinkedIn Group</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://www.quora.com/topic/CS50">Quora</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://www.snapchat.com/add/cs50">Snapchat</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://twitter.com/cs50">Twitter</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="http://www.youtube.com/subscription_center?add_user=cs50tv">YouTube</a></li>
+</ul>
+
+<hr>
+
+<p><a href="https://cs50.harvardshop.com/"><img src="Lecture%200%20-%20CS50x_files/uc.png" alt="Harvard Shop"></a></p>
+
+<hr></nav>
+
+                    <footer><p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="small">CC BY-NC-SA 4.0</a></p></footer>
+
+                </aside>
+
+                <main class="col-md markdown-body" style="margin-bottom: 0px;">
+
+                    <h1 class="no_toc" id="lecture-0"><a data-id="" href="#lecture-0">Lecture 0</a></h1>
+
+<ul id="markdown-toc">
+  <li><a href="#welcome" id="markdown-toc-welcome">Welcome</a></li>
+  <li><a href="#what-is-computer-science" id="markdown-toc-what-is-computer-science">What is computer science?</a></li>
+  <li><a href="#binary" id="markdown-toc-binary">Binary</a></li>
+  <li><a href="#representing-data" id="markdown-toc-representing-data">Representing data</a></li>
+  <li><a href="#algorithms" id="markdown-toc-algorithms">Algorithms</a></li>
+  <li><a href="#pseudocode" id="markdown-toc-pseudocode">Pseudocode</a></li>
+  <li><a href="#scratch" id="markdown-toc-scratch">Scratch</a></li>
+</ul>
+
+<h2 id="welcome"><a data-id="" href="#welcome">Welcome</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>When
+ David was a first year, he was too intimidated to take any computer 
+science courses. By the time he was a sophomore, he found the courage to
+ take the equivalent of CS50, but only pass/fail.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>In fact, two-thirds of CS50 students have never taken a CS course before.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>And importantly, too:
+    <blockquote>
+      <p>what ultimately matters in this course is not so much where you
+ end up relative to your classmates but where you end up relative to 
+yourself when you began</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="what-is-computer-science"><a data-id="" href="#what-is-computer-science">What is computer science?</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Computer science is fundamentally problem-solving.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We
+ can think of problem-solving as the process of taking some input 
+(details about our problem) and generate some output (the solution to 
+our problem). The “black box” in the middle is computer science.<br>
+<img src="Lecture%200%20-%20CS50x_files/input_output.png" alt="word &quot;input&quot;, arrow into box, arrow out of box, word &quot;output&quot;"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We need a way to represent inputs, such that we can store and work with information in a standard way.</li>
+</ul>
+
+<h2 id="binary"><a data-id="" href="#binary">Binary</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>A computer, at the lowest level, stores data in binary, a numeral system in which there are just two digits, 0 and 1.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>When
+ we first learned to count, we might have used one finger to represent 
+one thing. That system is called unary. When we learned to write numbers
+ with the digits 0 through 9, we learned to use decimal.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>For example, we know the following represents one hundred and twenty-three.
+    <pre>1 2 3
+</pre>
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>The <code class="highlighter-rouge">3</code> is in the ones column, the <code class="highlighter-rouge">2</code> is in the tens column, and the <code class="highlighter-rouge">1</code> is in the hundreds column.</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>So <code class="highlighter-rouge">123</code> is 100×1 + 10×2 + 1×3 = 100 + 20 + 3 = 123.</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Each place for a digit represents a power of ten, since there are ten possible digits for each place.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>In binary, with just two digits, we have powers of two for each place value:
+    <pre>4 2 1
+<b>0 0 0</b>
+</pre>
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>This would still be equal to 0.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Now if we change the binary value to, say, <code class="highlighter-rouge">0 1 1</code>, the decimal value would be 3.
+    <pre>4 2 1
+<b>0 1 1</b>
+</pre>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>If we wanted to represent 8, we would need another digit:
+    <pre>8 4 2 1
+<b>1 0 0 0</b>
+</pre>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>And
+ binary makes sense for computers because we power them with 
+electricity, which can be either on or off, so each bit only needs to be
+ on or off. In a computer, there are millions or billions of switches 
+called transistors that can store electricity and represent a bit by 
+being “on” or “off”.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>With enough bits, or binary digits, computers can count to any number.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>8 bits make up one <strong>byte</strong>.</li>
+</ul>
+
+<h2 id="representing-data"><a data-id="" href="#representing-data">Representing data</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>To
+ represent letters, all we need to do is decide how numbers map to 
+letters. Some humans, many years ago, collectively decided on a standard
+ mapping called <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>.
+ The letter “A”, for example, is the number 65, and “B” is 66, and so 
+on. The mapping also includes punctuation and other symbols. Other 
+characters, like letters with accent marks, and emoji, are part of a 
+standard called <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> that use more bits than ASCII to accommodate all these characters.
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>When we receive an emoji, our computer is actually just receiving a decimal number like <code class="highlighter-rouge">128514</code> (<code class="highlighter-rouge">11111011000000010</code> in binary, if you can read that more easily) that it then maps to the image of the emoji.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>An
+ image, too, is comprised of many smaller square dots, or pixels, each 
+of which can be represented in binary with a system called RGB, with 
+values for red, green, and blue light in each pixel. By mixing together 
+different amounts of each color, we can represent millions of colors:<br>
+<img src="Lecture%200%20-%20CS50x_files/rgb.png" alt="red square labeled with 72, green square labeled with 73, blue square labeled with 33">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>The red, green, and blue values are combined to get a light yellow color:<br>
+<img src="Lecture%200%20-%20CS50x_files/rgb_combined.png" alt="light yellow square"></li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can see this in an emoji if we zoom in far enough:
+<img src="Lecture%200%20-%20CS50x_files/emoji_zoomed.png" alt="zoomed-in emoji of laughing tears of joy with squares of pixels distinguishable"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>And
+ computer programs know, based on the context of its code, whether the 
+binary numbers should be interpreted as numbers, or letters, or pixels.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>And
+ videos are just many, many images displayed one after another, at some 
+number of frames per second. Music, too, can be represented by the notes
+ being played, their duration, and their volume.</li>
+</ul>
+
+<h2 id="algorithms"><a data-id="" href="#algorithms">Algorithms</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>So now we can represent inputs and outputs. The black box earlier will contain <em>algorithms</em>, step-by-step instructions for solving a problem:<br>
+<img src="Lecture%200%20-%20CS50x_files/algorithms.png" alt="box with word &quot;algorithms&quot;"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Let’s say we wanted to find a friend, Mike Smith, in a phone book.
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We could start by flipping through the book, one page at a time, until we find Mike Smith or reach the end of the book.</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We could also flip two pages at a time, but if we go too far, we’ll have to know to go back a page.</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>But
+ an even more efficient way would be opening the phone book to the 
+middle, decide whether Mike will be in the left half or right half of 
+the book (because the book is alphabetized), and immediately throw away 
+half of the problem. We can repeat this, dividing the problem in half 
+each time. With 1024 pages to start, we would only need 10 steps of 
+dividing in half before we have just one page remaining to check.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>In fact, we can represent the efficiency of each of those algorithms with a chart:<br>
+<img src="Lecture%200%20-%20CS50x_files/running_time.png" alt="chart with: &quot;size of problem&quot; as x-axis; &quot;time to solve&quot; as y-axis; red, steep straight line from origin to top of graph labeled &quot;n&quot;; yellow, less steep straight line from origin to top of graph labeled &quot;n/2&quot;; green, curved line that gets less and less steep from origin to right of graph labeled &quot;log n&quot;">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Our
+ first solution, one page at a time, is like the red line: our time to 
+solve increases linearly as the size of the problem increases.</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>The second solution, two pages at a time, is like the yellow line: our slope is less steep, but still linear.</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Our
+ final solution, is like the green line: logarithmic, since our time to 
+solve rises more and more slowly as the size of the problem increases. 
+In other words, if the phone book went from 1000 to 2000 pages, we would
+ need one more step to find Mike. If the size doubled again from 2000 to
+ 4000 pages, we would still only need one more step.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="pseudocode"><a data-id="" href="#pseudocode">Pseudocode</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can write <em>pseudocode</em>, an informal syntax that is just a more specific version of English (or other human language) that represents our algorithm:
+    <pre>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If Smith is on page
+5      Call Mike
+6  Else if Smith is earlier in book
+7      Open to middle of left half of book
+8      Go back to line 3
+9  Else if Smith is later in book
+10     Open to middle of right half of book
+11     Go back to line 3
+12 Else
+13     Quit
+</pre>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Some of these lines start with verbs, or actions. We’ll start calling these <em>functions</em>:
+    <pre>1  <b>Pick up</b> phone book
+2  <b>Open to</b> middle of phone book
+3  <b>Look at</b> page
+4  If Smith is on page
+5      <b>Call</b> Mike
+6  Else if Smith is earlier in book
+7      <b>Open to</b> middle of left half of book
+8      Go back to line 3
+9  Else if Smith is later in book
+10     <b>Open to</b> middle of right half of book
+11     Go back to line 3
+12 Else
+13     <b>Quit</b>
+</pre>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We also have branches that lead to different paths, like forks in the road, which we’ll call <em>conditions</em>:
+    <pre>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  <b>If</b> Smith is on page
+5      Call Mike
+6  <b>Else if</b> Smith is earlier in book
+7      Open to middle of left half of book
+8      Go back to line 3
+9  <b>Else if</b> Smith is later in book
+10     Open to middle of right half of book
+11     Go back to line 3
+12 <b>Else</b>
+13     Quit
+</pre>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>And the questions that decide where we go are called <em>Boolean expressions</em>, which eventually result to a value of true or false:
+    <pre>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If <b>Smith is on page</b>
+5      Call Mike
+6  Else if <b>Smith is earlier in book</b>
+7      Open to middle of left half of book
+8      Go back to line 3
+9  Else if <b>Smith is later in book</b>
+10     Open to middle of right half of book
+11     Go back to line 3
+12 Else
+13     Quit
+</pre>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Finally, we have words that lead to cycles, where we can repeat parts of our program, called <em>loops</em>:
+    <pre>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If Smith is on page
+5      Call Mike
+6  Else if Smith is earlier in book
+7      Open to middle of left half of book
+8      <b>Go back to line 3</b>
+9  Else if Smith is later in book
+10     Open to middle of right half of book
+11     <b>Go back to line 3</b>
+12 Else
+13     Quit
+</pre>
+  </li>
+</ul>
+
+<h2 id="scratch"><a data-id="" href="#scratch">Scratch</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can write programs with the building blocks we just discovered:
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>functions</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>conditions</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Boolean expressions</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>loops</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We’ll use a graphical programming language called <a href="https://scratch.mit.edu/">Scratch</a>, where we’ll drag and drop blocks that contain instructions.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Later
+ in our course, we’ll move onto textual programming languages like C, 
+and Python, and JavaScript. All of these languages, including Scratch, 
+has more powerful features like:
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>variables
+        <ul class="fa-ul">
+          <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>the ability to store values and change them</li>
+        </ul>
+      </li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>threads
+        <ul class="fa-ul">
+          <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>the ability for our program to do multiple things at once</li>
+        </ul>
+      </li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>events
+        <ul class="fa-ul">
+          <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>the ability to respond to changes in our program or inputs</li>
+        </ul>
+      </li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>…</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>The programming environment for Scratch looks like this:<br>
+<img src="Lecture%200%20-%20CS50x_files/scratch.png" alt="screenshot of scratch">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>On
+ the left, we have puzzle pieces that represent functions or variables, 
+or other concepts, that we can drag and drop into our instruction area 
+in the center.</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>On
+ the right, we have a stage that will be shown by our program to a 
+human, where we can add or change backgrounds, characters (called 
+sprites in Scratch), and more.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can drag a few blocks to make Scratch say “hello, world”:<br>
+<img src="Lecture%200%20-%20CS50x_files/hello_world.png" alt="screenshot of hello, world">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>The
+ “when green flag clicked” block is the start of our program, and below 
+it we’ve snapped in a “say” block and typed in “hello, world”.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We
+ can also drag in the “ask and wait” block, with a question like “What’s
+ your name?”, and combine it with a “say” block for the answer:<br>
+<img src="Lecture%200%20-%20CS50x_files/answer.png" alt="screenshot of question and answer"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>But we didn’t wait after we said “Hello” with the first block, so we can use the “say () for () seconds” block:<br>
+<img src="Lecture%200%20-%20CS50x_files/wait.png" alt="screenshot of blocks with say for 2 seconds"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can use the “join” block to combine two phrases so Scratch can say “hello, David”:<br>
+<img src="Lecture%200%20-%20CS50x_files/join.png" alt="screenshot of join">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Notice that we can nest instructions and variables.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>In
+ fact, the “say” block itself is like an algorithm, where we provided an
+ input of “hello, world” and it produced the output of Scratch (the cat)
+ “saying” that phrase:<br>
+<img src="Lecture%200%20-%20CS50x_files/say_algorithm.png" alt="say as algorithm with &quot;hello, world&quot; as input and cat as output"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>The “ask” block, too, takes in an input (the question we want to ask), and produces the output of the “answer” block:<br>
+<img src="Lecture%200%20-%20CS50x_files/ask_algorithm.png" alt="ask as algorithm with &quot;What's your name?&quot; as input and answer block as output"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can then use the “answer” block along with our own text, “hello, “, as two inputs to the join algorithm …<br>
+<img src="Lecture%200%20-%20CS50x_files/join_algorithm.png" alt="join as algorithm with &quot;hello, &quot; and &quot;answer&quot; as input and &quot;hello, David!&quot; as output"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>… which we pass as input again to the “say” block:<br>
+<img src="Lecture%200%20-%20CS50x_files/say_again.png" alt="say as algorithm with &quot;hello, David!&quot; as input and cat as output"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can try to make Scratch (the name of the cat) say meow:<br>
+<img src="Lecture%200%20-%20CS50x_files/forever_meow.png" alt="blocks labeled &quot;forever&quot; with &quot;play sound Meow until done&quot; nested inside">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>But
+ when we click the green flag, we hear the meow sound over and over 
+immediately. Our first bug, or mistake! We can add a block to wait, so 
+the meows sound more normal.<br>
+<img src="Lecture%200%20-%20CS50x_files/forever_meow_wait.png" alt="blocks labeled &quot;forever&quot; with &quot;play sound Meow until done&quot; and &quot;wait 1 seconds&quot; nested inside"></li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can have Scratch point towards the mouse and move towards it:<br>
+<img src="Lecture%200%20-%20CS50x_files/point_towards.png" alt="blocks labeled &quot;forever&quot; with &quot;point towards mouse-pointer&quot; and &quot;move 10 steps&quot; nested inside"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We’ll look at a sheep that can count:<br>
+<img src="Lecture%200%20-%20CS50x_files/count.png" alt="blocks labeled &quot;set counter to 1&quot; and &quot;forever&quot; with &quot;say counter for 1 seconds&quot;, &quot;wait 1 seconds&quot;, and &quot;change counter by 1&quot; nested inside">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Here, <code class="highlighter-rouge">counter</code> is a variable, the value of which we can set, use, and change.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can also have Scratch meow if we touch it with the mouse pointer:<br>
+<img src="Lecture%200%20-%20CS50x_files/pet0.png" alt="blocks labeled &quot;forever&quot; with &quot;if touching mouse-pointer? then&quot; and &quot;play sound Meow until done&quot; nested inside"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Alternatively, we can have Scratch roar if we do:<br>
+<img src="Lecture%200%20-%20CS50x_files/pet1.png" alt="blocks labeled &quot;forever&quot; with &quot;if touching mouse-pointer? then&quot; and &quot;play sound roar until done&quot; nested inside, and &quot;else&quot;, &quot;play sound Meow until done&quot;, &quot;wait 1 seconds&quot;">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Here,
+ we have two different branches, or conditions, that will repeat 
+forever. If the mouse is touching it, Scratch will “roar”, otherwise it 
+will just meow.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can make Scratch move back and forth on the screen with a few more blocks we can discover by looking around:<br>
+<img src="Lecture%200%20-%20CS50x_files/ouch.png" alt="blocks labeled &quot;set rotation style left-right&quot; and &quot;forever&quot; with &quot;move 10 steps&quot;, &quot;if touching edge? then&quot; and &quot;play sound ouch until done&quot;, &quot;turn 180 degrees&quot;">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can even record our own sound to play.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>With
+ two different “costumes,” or images of Scratch with its legs in 
+different positions, we can even simulate an animated walking motion:<br>
+<img src="Lecture%200%20-%20CS50x_files/bounce.png" alt="blocks labeled &quot;set rotation style left-right&quot; and &quot;forever&quot; with &quot;move 10 steps&quot;, &quot;if touching edge? then&quot; with &quot;play sound ouch until done&quot;, &quot;turn 180 degrees&quot; nested inside, and &quot;next costume&quot;"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We look at another program, bark, where we can use the space bar to mute a sea lion:<br>
+<img src="Lecture%200%20-%20CS50x_files/bark.png" alt="blocks labeled &quot;set muted to false&quot; and &quot;forever&quot; with if key space pressed? then&quot; with &quot;if muted = true then&quot; and &quot;set muted to false&quot; and &quot;else&quot; and &quot;set muted to true&quot; nested inside, and &quot;wait 1 seconds&quot;">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We have a variable, <code class="highlighter-rouge">muted</code>, that’s <code class="highlighter-rouge">false</code> by default. And our program will constantly check if the space bar is pressed, and set muted to <code class="highlighter-rouge">false</code> if it’s <code class="highlighter-rouge">true</code>, or <code class="highlighter-rouge">true</code> if not. This way, we can toggle whether the sound plays or not, since our other set of blocks for the sea lion check the <code class="highlighter-rouge">muted</code> variable:<br>
+<img src="Lecture%200%20-%20CS50x_files/bark1.png" alt="blocks labeled &quot;forever&quot; with if muted = false then&quot; with &quot;start sound SeaLion&quot; and &quot;think hi hi hi for 2 seconds&quot; nested inside, and &quot;wait 1 seconds&quot;"></li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>With multiple sprites, or characters, we can have different sets of blocks for each of them:<br>
+<img src="Lecture%200%20-%20CS50x_files/marco.png" alt="blocks labeled &quot;forever&quot; with if key space pressed? then&quot; with &quot;say Marco! for 2 seconds&quot; and &quot;broadcast event&quot; nested inside">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>For
+ one puppet, we have these blocks that say “Marco!”, and then a 
+“broadcast event” block. This “event” is used for our two sprites to 
+communicate with each other, like sending a secret message. So our other
+ puppet can just wait for this event to say “Polo!”:<br>
+<img src="Lecture%200%20-%20CS50x_files/polo.png" alt="blocks labeled &quot;when I receive event&quot;, &quot;say Polo! for 2 seconds&quot;"></li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Now
+ that we know some basics, we can think about the design, or quality of 
+our programs. For example, we might want to have Scratch cough three 
+times by repeating some blocks:<br>
+<img src="Lecture%200%20-%20CS50x_files/cough0.png" alt="blocks labeled &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;, &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;, &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>While this is correct, we can avoid repeating blocks with a loop:<br>
+<img src="Lecture%200%20-%20CS50x_files/cough1.png" alt="blocks labeled &quot;repeat 3&quot; with &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot; nested inside"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>The
+ next step is abstracting away some of our code into a function, or 
+making it reusable in different ways. We can make a block called “cough”
+ and put some blocks inside it:<br>
+<img src="Lecture%200%20-%20CS50x_files/cough_function.png" alt="two sets of blocks. the first set of blocks is: &quot;define cough&quot;, &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;. the second set is: &quot;when green flag clicked&quot;, &quot;repeat 3&quot;, &quot;cough&quot;">
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Now, all of our sprites can use the same “cough” block, in as many places as we’d like.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We can even put a number of times into our cough function, so we only need a single block to cough any number of times:<br>
+<img src="Lecture%200%20-%20CS50x_files/cough_function_2.png" alt="two sets of blocks. the first set of blocks is: &quot;define cough n times&quot;, &quot;repeat n&quot;, say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;. the second set is: &quot;when green flag clicked&quot;, &quot;cough 3 times&quot;"></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>We
+ look at some examples and discuss how we might implement components of 
+them with different sprites that follow the mouse cursor, or cause 
+something else to happen on the stage.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span>Welcome aboard!</li>
+</ul>
+
+
+                </main>
+
+            </div>
+
+        </div>
+
+        
+ 
+    
+
+
+</body></html>
